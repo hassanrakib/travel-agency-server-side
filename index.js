@@ -69,6 +69,18 @@ async function run() {
             res.json(allBookings);
         })
 
+        app.put('/update-booking/:id', async (req, res) => {
+            const id = req.params.id;
+            const filter = { _id: ObjectId(id) };
+            const updatedBooking = {
+                $set: {
+                    status: `Approved`
+                },
+            };
+            const result = await ordersCollection.updateOne(filter, updatedBooking);
+            res.send('');
+        })
+
 
     } finally {
         //   await client.close();
