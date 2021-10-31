@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 require('dotenv').config()
 const ObjectId = require('mongodb').ObjectId;
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 
 
@@ -88,6 +88,10 @@ async function run() {
 }
 
 run().catch(console.dir);
+
+app.get('/', (req, res) => {
+    res.end("INFO: SERVER IS UP AND RUNNING");
+})
 
 app.listen(port, () => {
     console.log('SERVER IS RUNNING...', port);
