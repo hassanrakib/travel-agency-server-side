@@ -78,7 +78,7 @@ async function run() {
                 },
             };
             const result = await ordersCollection.updateOne(filter, updatedBooking);
-            res.send('');
+            res.json(result);
         })
 
 
