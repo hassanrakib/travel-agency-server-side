@@ -1,12 +1,10 @@
-# Travel Agency Web App Server
+# Travel Agency App
 
-Live link: [Travel Agency](https://travel-agency-web-app.web.app/).
+Live Website: [Travel Agency](https://travel-agency-web-app.web.app/).
 
+## Notable things I did in this project:
 
-## What technologies this server used?
-
-- Node JS
-- Express JS
-- MongoDB
-- dotenv package
-- cors package
+- Created carousel with React Slick.
+- Utilized React Hook form.
+- Applied Firebase authentication system.
+- Implemented data loading, sending and updating through backend.
